@@ -12,8 +12,9 @@ class MatterController extends Controller
 
         $query = DB::connection('userdb')
             ->table('Matter')
+            ->select("RecordID")
             ->get()
-            ->take(2);
+            ->take(1);
 
         return $query;
 
