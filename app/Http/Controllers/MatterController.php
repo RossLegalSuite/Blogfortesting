@@ -10,7 +10,7 @@ class MatterController extends Controller
     public function GetMatter(Request $request)
     {
 
-        $query = DB::connection('odbc-connection-name')
+        $query = DB::connection('userdb')
             ->table('Matter')
             ->get()
             ->take(2);
